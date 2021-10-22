@@ -3,14 +3,12 @@ import React from 'react';
 class InputConverter extends React.Component {
   constructor(props) {
     super(props);
-    
-    this.state = {value: ''};
+    this.state = { value: '' };
   }
 
-
   handleChange(event) {
-    this.setState = ({
-      value: event.target.value
+    this.setState({
+      value: event.target.value,
     });
   }
 
@@ -18,11 +16,15 @@ class InputConverter extends React.Component {
     return (
       <div>
         <label>Entrez une valeur en {this.props.type} : </label>
-        <input value={this.state.value} onChange={() => this.handleChange} />
+        <input
+          type="text"
+          onChange={(e) => this.handleChange(e)}
+          value={this.state.value}
+        />
         <p>{this.state.value}</p>
       </div>
     );
   }
 }
 
-export default InputConverter
+export default InputConverter;
