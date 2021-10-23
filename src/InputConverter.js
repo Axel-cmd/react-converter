@@ -8,18 +8,23 @@ const inputNames = {
 class InputConverter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: '' };
+    // this.state = { value: '' };
   }
 
   handleChange(event) {
-    this.setState({
-      value: event.target.value,
-    });
+    // this.setState({
+    //   value: event.target.value,
+    // });
+    //à la place de setState on doit appelé une méthode qui sera donnée par CalculatorConverter
+    this.props.onValueChange(event.target.value)
   }
 
   render() {
 
     const name = this.props.type;
+
+    //on utilise le props pour la valeur et non plus le state car la valeur sera passé par l'ancetre commun au input
+    const value = this.props.value;
 
     return (
       <div>
@@ -27,10 +32,10 @@ class InputConverter extends React.Component {
         <input
           type="number"
           onChange={(e) => this.handleChange(e)}
-          value={this.state.value}
+          value={value}
         />
-        <p>{this.state.value}</p>
       </div>
+      
     );
   }
 }
