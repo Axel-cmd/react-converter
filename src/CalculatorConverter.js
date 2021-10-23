@@ -2,11 +2,17 @@ import React from 'react';
 import InputConverter from './InputConverter';
 
 class CalculatorConverter extends React.Component {
+
+  // constructor(props){
+  //   super(props)
+  //   this.state = { value: '' };
+  // }
+
   render() {
     return (
       <>
-        <InputConverter type="centimètre" />
-        <InputConverter type="mètre" />
+        <InputConverter type="e" />
+        <InputConverter type="d" />
       </>
     );
   }

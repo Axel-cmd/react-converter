@@ -1,5 +1,10 @@
 import React from 'react';
 
+const inputNames = {
+  e: "Euro",
+  d: "Dollar"
+}
+
 class InputConverter extends React.Component {
   constructor(props) {
     super(props);
@@ -13,9 +18,12 @@ class InputConverter extends React.Component {
   }
 
   render() {
+
+    const name = this.props.type;
+
     return (
       <div>
-        <label>Entrez une valeur en {this.props.type} : </label>
+        <label>Entrez une valeur en {inputNames[name]} : </label>
         <input
           type="number"
           onChange={(e) => this.handleChange(e)}
