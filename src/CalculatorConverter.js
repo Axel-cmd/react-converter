@@ -1,6 +1,7 @@
 import React from 'react';
 import InputConverter from './InputConverter';
 
+
 //taux de change = valeur de 1 dollar en euro
 const changeRate = 0.85885;
 
