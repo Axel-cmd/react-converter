@@ -1,6 +1,10 @@
 import React from 'react';
 import InputConverter from './InputConverter';
 
+const divStyle={
+  textAlign: "center",
+  margin: "50px"
+}
 
 //taux de change = valeur de 1 dollar en euro
 const changeRate = 0.85885;
@@ -57,10 +61,10 @@ class CalculatorConverter extends React.Component {
     const dollar = name === 'e' ? conversion(value, euroToDollar) : value;// si le state.name est égale à e on convertis sinon on affiche tel quel
 
     return (
-      <>
+      <div style={divStyle}>
         <InputConverter type="e" value={euros} onValueChange={(e)=>this.handleEuroChange(e)}/>
         <InputConverter type="d" value={dollar} onValueChange={(e)=>this.handleDollarChange(e)}/>
-      </>
+      </div>
     );
   }
 }
