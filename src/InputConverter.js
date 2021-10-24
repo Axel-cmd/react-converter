@@ -1,4 +1,5 @@
 import React from 'react';
+import { TextField } from '@material-ui/core';
 
 const inputNames = {
   e: 'Euro',
@@ -21,8 +22,11 @@ class InputConverter extends React.Component {
     return (
       <>
         <div>
-          <label>Entrez une valeur en {inputNames[name]} : </label>
-          <input
+         {/* input de material ui */}
+          <TextField
+            id="outlined-basic"
+            label={inputNames[name]}
+            variant="outlined"
             type="number"
             onChange={(e) => this.handleChange(e)}
             value={value}
