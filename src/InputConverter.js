@@ -1,6 +1,9 @@
 import React from 'react';
 import { TextField } from '@material-ui/core';
 
+const inputStyle ={
+  width: "80%"
+}
 const inputNames = {
   e: 'Euro',
   d: 'Dollar',
@@ -23,13 +26,14 @@ class InputConverter extends React.Component {
       <>
         <div>
          {/* input de material ui */}
-          <TextField
+          <TextField 
             id="outlined-basic"
             label={inputNames[name]}
             variant="outlined"
             type="number"
             onChange={(e) => this.handleChange(e)}
             value={value}
+            style={inputStyle}
           />
         </div>
         <br />

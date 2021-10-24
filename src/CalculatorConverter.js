@@ -3,7 +3,7 @@ import InputConverter from './InputConverter';
 
 const divStyle={
   textAlign: "center",
-  margin: "50px"
+  marginTop: "100px"
 }
 
 //taux de change = valeur de 1 dollar en euro
