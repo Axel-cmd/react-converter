@@ -2,6 +2,7 @@ import React from 'react';
 import './app.css';
 import CalculatorConverter from '../converterDevise/CalculatorConverter';
 import CalculatorDistance from '../converterDistance/CalculatorDistance';
+import CalculatorPoids from '../converterPoids/CalculatorPoids'
 import Menu from '../Menu/Menu';
 
 export default class App extends React.Component {
@@ -37,6 +38,7 @@ export default class App extends React.Component {
         <Menu onChangeValue={(e)=> this.handleChange(e)}/>
         
         {element}
+        <CalculatorPoids/>
       </div>
     );
   }
