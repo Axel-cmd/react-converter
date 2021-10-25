@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './app.css';
 import CalculatorConverter from '../converter/CalculatorConverter';
 
 
