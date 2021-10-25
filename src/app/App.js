@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import CalculatorConverter from './CalculatorConverter';
+import CalculatorConverter from '../converter/CalculatorConverter';
 
 
 export default function App() {
