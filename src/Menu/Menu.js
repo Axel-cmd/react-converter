@@ -16,17 +16,24 @@ export default class Menu extends React.Component {
         <Button
           style={{ marginLeft: '20%' }}
           variant="contained"
-          onClick={() => this.onChange(true)}
+          onClick={() => this.onChange(1)}
         >
           Devise
         </Button>
         <Button
           variant="contained"
-          style={{ marginLeft: '50%' }}
-          onClick={() => this.onChange(false)}
+          style={{ marginLeft: '20%' }}
+          onClick={() => this.onChange(2)}
         >
           Distance
         </Button>
+      <Button
+      variant="contained"
+      style={{ marginLeft: '20%' }}
+      onClick={() => this.onChange(3)}
+      >
+        Poids
+      </Button>
       </div>
     );
   }

@@ -11,7 +11,7 @@ export default class App extends React.Component {
   {
     super(props);
     this.state = {
-      devise: true
+      devise: 1
     }
   }
 
@@ -26,10 +26,13 @@ export default class App extends React.Component {
   {
 
     var element;
-    if(this.state.devise){
+    if(this.state.devise == 1){
       element = <CalculatorConverter />
-    }else {
+    }else if (this.state.devise == 2){
       element = <CalculatorDistance />
+    }
+    else{
+      element =  <CalculatorPoids/>
     }
 
     return (
@@ -38,7 +41,7 @@ export default class App extends React.Component {
         <Menu onChangeValue={(e)=> this.handleChange(e)}/>
         
         {element}
-        <CalculatorPoids/>
+       
       </div>
     );
   }
