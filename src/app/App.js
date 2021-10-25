@@ -1,13 +1,14 @@
 import React from 'react';
 import './app.css';
-import CalculatorConverter from '../converter/CalculatorConverter';
-
+import CalculatorConverter from '../converterDevise/CalculatorConverter';
+import CalculatorDistance from '../converterDistance/CalculatorDistance';
 
 export default function App() {
   return (
     <div>
       <h1>Application de conversion</h1>
       <CalculatorConverter />
+      <CalculatorDistance />
     </div>
   );
 }
